@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>www.yamiprivate.com</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <img src="logo.png" alt="Yami music" class="logo">
+    <h2>Yami Musik</h2>
+  <div id="popup">
+    <img src="iklan.jpg" alt="Gambar Iklan" 
+     onclick="window.location.href='https://wa.me/6283121082008?text=Halo%2C+saya+tertarik+dengan+produk+Anda';">
+    <span class="close" onclick="closePopup()">×</span>
+  </div>
+  <script>
+    // Fungsi untuk menampilkan pop-up
+    function showPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    // Fungsi untuk menutup pop-up
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+    setTimeout(showPopup, 20000); // 1000 = 1 detik, 10000 = 10 detik
+  </script>
+    <div class="song-info">
+      <span id="song-name"></span> -
+      <span id="song-artist"></span> (
+      <span id="song-duration"></span>
+      )
+    </div>
+    <audio controls id="audio">
+      <source src="rezz.mp3" type="audio/mpeg">
+      <source src="gimi.mp3" type="audio/mpeg">
+      <source src="japan1.mp3" type="audio/mpeg">
+      <source src="japan2.mp3" type="audio/mpeg">
+      <source src="japan3.mp3" type="audio/mpeg">
+      <source src="japan4.mp3" type="audio/mpeg">
+      <source src="japan5.mp3" type="audio/mpeg">
+      <source src=musik/bestjapan.mp3 type="audio/mpeg">Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+      <button id="prevTrack" disabled>sebelumnya</button>
+      <button id="playPause">lanjut/jeda</button>
+      <button id="nextTrack">lanjutnya</button>
+    </div>
+    <input type="range" min="0" max="1" step="0.01" value="0.5" id="volume">
+    <div id="song-list">
+      <ul>
+        <li data-song="rezz.mp3">Rezz - Track 1</li> <li data-song="gimi.mp3">Gimi - Track 2</li> <li data-song="japan1.mp3">japan1 - Track 3</li> <li data-song="japan2.mp3">japan2 - Track 4</li> <li data-song="japan3.mp3">japan3 - Track 5</li> <li data-song="japan4.mp3">japan4 - Track 6</li> <li data-song="japan5.mp3">japan5 - Track 7</li> <li data-song="bestjapan.mp3">best japan - Track 8</li></ul>
+    </div>
+    <input type="text" id="search" placeholder="Cari Musik">
+<ul id="music-list">
+  <li><audio data-title="Gimi" src="gimi.mp3"></audio>#</li>
+  <li><audio data-title="japan5" src="japan5.mp3"></audio>#</li>
+</ul>
+    <div class="sosial">
+        <a href="https://instagram.com/rezzsarden_" target="_blank">
+            <img src="d-6.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/share/1Bc9tSUvxJ/?mibextid=qi2Omg" target="_blank">
+            <img src="d-s.png" alt="Facebook">
+        </a>
+    </div>
+  </div>
+      <div id="login-form" style="display: none;">
+        <h2>WEB PRIVATE YAMI</h2>
+        <img src="logo-login.png" alt="login" class="logo-login">
+        <label for="username">Masukan Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+        <label for="password">Masukan Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+        <a href="https://wa.me/6283121082008?text=Halo,%20saya%20ingin%20menghubungi%20admin" class="contact-admin">Hubungi Admin</a> <div class="sosial">
+        <a href="https://instagram.com/rezzsarden_" target="_blank">
+            <img src="d-6.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/share/1Bc9tSUvxJ/?mibextid=qi2Omg" target="_blank">
+            <img src="d-s.png" alt="Facebook">
+        </a>
+    </div>
+    </div>
+    <script>
+        // Data pengguna dalam format JSON
+        const users = [
+            { username: 'Rezza', password: 'YamI#123' }
+        ];
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            let isAuthenticated = false;
+            users.forEach(user => {
+                if (user.username === username && user.password === password) {
+                    isAuthenticated = true;
+                }
+            });
+            if (isAuthenticated) {
+                document.getElementById('login-form').style.display = 'none';
+                document.querySelector('.player').style.display = 'block';
+            } else {
+                alert('Username atau password salah');
+            }
+        }
+        document.getElementById('login-form').style.display = 'block';
+        document.querySelector('.player').style.display = 'none';
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>

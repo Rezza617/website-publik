@@ -1,0 +1,321 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #282828;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-style: italic;
+  color:#92ff75;
+}
+
+li{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.player {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+
+  /* Gaya awal, sembunyikan elemen */
+  transform: translateX(100%);
+  opacity: 0;
+
+  /* Animasi masuk */
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  animation: berputar 2s linear infinite;
+  position: relative;
+  top: -3px; /* Sesuaikan jarak dari teks */
+}
+
+@keyframes berputar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+audio {
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  box-shadow: #333;
+}
+
+audio::-webkit-media-controls {
+  background-color: #222;
+  color: #fff;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #222;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-stop-button {
+  color: #fff;
+  background-color: #1DB954;
+  border-radius: 50%;
+}
+
+input[type="range"] {
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #1DB954;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  background-color: #1DB954;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup {
+  display: none; /* Sembunyikan pop-up secara default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#popup img {
+  margin: 15% auto;
+  display: block;
+  width: 80%;
+  cursor: pointer;
+  position: center;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.sosial a{
+  text-decoration: none;
+}
+
+.sosial img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+  margin: 10px;
+  float: right;
+
+  /* Animasi membesar mengecil */
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+}
+/*bagian from login nya*/
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('your_background_image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Login Form Styles */
+#login-form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#login-form h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.contact-admin {
+ display: block;
+ margin-top: 10px;
+ text-decoration: none;
+ color: #0594f2;
+}
+
+#login-form .logo-login {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -3px;
+
+  /* Animasi */
+  animation: bounce 4s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#login-form button {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+  background-color: #ffe370;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Tambahkan transisi untuk transform */
+
+  /* Efek hover */
+  &:hover {
+    background-color: #3e8e41; /* Warna sedikit lebih gelap saat dihover */
+    transform: scale(1.05); /* Agak membesar saat dihover */
+  }
+
+  /* Efek saat ditekan */
+  &:active {
+    background-color: #2e6534; /* Warna lebih gelap lagi saat ditekan */
+    transform: scale(0.95); /* Agak mengecil saat ditekan */
+  }
+}
+
+#login-form button:hover {
+  background-color: red;
+  transition: background-color 0,3s;
+}
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
